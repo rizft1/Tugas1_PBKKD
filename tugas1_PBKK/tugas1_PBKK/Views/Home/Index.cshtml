@@ -1,0 +1,253 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!--
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+-->
+
+<!DOCTYPE HTML>
+<html lang="zxx">
+
+<head>
+	<title>Laundry-ku</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Go Laundry Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="~/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- gallery css -->
+	<link rel="stylesheet" href="~/css/swipebox.css">
+	<!-- Custom CSS -->
+	<link href="~/css/style.css" rel='stylesheet' type='text/css' />
+	<!-- font-awesome icons -->
+	<link href="~/css/fontawesome-all.min.css" rel="stylesheet">
+	<!-- //Custom Theme files -->
+	<!--webfonts-->
+	<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+	    rel="stylesheet">
+	<!--//webfonts-->
+</head>
+
+<body>
+	<!-- header -->
+	
+	<!-- //header -->
+	<!-- banner -->
+	<div class="banner" id="home">
+		<div class="container">
+			<div class="banner-text text-center">
+				<div class="callbacks_container">
+					<ul class="rslides" id="slider3">
+						<li>
+							<div class="slider-info">
+								<h3 class="text-capitalize">We care for all your valued garments </h3>
+								<a class="btn btn-primary  mt-4 text-capitalize scroll" asp-area="" asp-controller="Home" asp-action="Product" role="button">read more</a>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //banner -->
+	
+	
+	<!-- footer -->
+	
+	<!-- //footer -->
+	<!-- order modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title text-capitalize" id="exampleModalLabel1">order your laundry</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="#" method="post" class="p-3">
+						<div class="form-group">
+							<label for="recipient-name" class="col-form-label">Your Name</label>
+							<input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
+						</div>
+						<div class="form-group">
+							<label for="recipient-name1" class="col-form-label">Your Email</label>
+							<input type="email" class="form-control" placeholder=" " name="Name" id="recipient-name1" required="">
+						</div>
+						<div class="form-group">
+							<label for="recipient-name2" class="col-form-label">Phone</label>
+							<input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name2" required="">
+						</div>
+						<div class="form-group">
+							<label class="mr-2 col-form-label">Pick Up</label>
+							<input id="datepicker1" name="check in" type="text" value="mm/dd/yyyy" class="form-control" required="">
+						</div>
+						<div class="form-group">
+							<label class="mr-2 col-form-label">Delivery </label>
+							<input id="datepicker2" name="check out" type="text" value="mm/dd/yyyy" class="form-control" required="">
+						</div>
+						<div class="form-check">
+							<label class="form-check-label col-form-label" for="l1">
+								<input type="checkbox" class="form-check-input" value="" id="l1">Wash& Fold
+							</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label col-form-label" for="l2">
+								<input type="checkbox" class="form-check-input" value="" id="l2">Handwash
+							</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label col-form-label" id="l3">
+								<input type="checkbox" class="form-check-input" value="" id="13">Dry Clean
+							</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label col-form-label" for="l4">
+								<input type="checkbox" class="form-check-input" value="" id="l4">Carpets
+							</label>
+						</div>
+						<div class="form-group">
+							<label for="comment" class="col-form-label">Pickup Address:</label>
+							<textarea class="form-control" rows="5" id="comment"></textarea>
+						</div>
+
+						<div class="right-w3l">
+							<input type="submit" class="form-control" value="pick my laundry">
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //order modal -->
+	<!-- js-->
+	
+	<script src="~/js/jquery-2.2.3.min.js"></script>
+	<!-- js-->
+	<!-- Banner text Responsiveslides -->
+	<script src="~/js/responsiveslides.min.js"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider3").responsiveSlides({
+				auto: true,
+				pager: true,
+				nav: false,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!-- //Banner text  Responsiveslides -->
+	<!-- start-smooth-scrolling -->
+	<script src="~/js/move-top.js "></script>
+	<script src="`~/js/easing.js "></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll ").click(function (event) {
+				event.preventDefault();
+
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- //end-smooth-scrolling -->
+	<!-- smooth-scrolling-of-move-up -->
+	<script>
+		$(document).ready(function () {
+			/*
+			 var defaults = {
+				 containerID: 'toTop', // fading element id
+				 containerHoverID: 'toTopHover', // fading element hover id
+				 scrollSpeed: 1200,
+				 easingType: 'linear' 
+			 };
+			 */
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<script src="~/js/SmoothScroll.min.js "></script>
+	<!-- //smooth-scrolling-of-move-up -->
+	<!-- gallery swipebox -->
+	<script src="~/js/jquery.swipebox.min.js"></script>
+	<script>
+		jQuery(function ($) {
+			$(".swipebox").swipebox();
+		});
+	</script>
+	<script src="~/js/jquery.adipoli.min.js"></script>
+	<!-- effect -->
+	<script>
+		$(function () {
+			$('.row2').adipoli({
+				'startEffect': 'overlay',
+				'hoverEffect': 'sliceDown'
+			});
+		});
+	</script>
+	<!-- //swipe box js -->
+	<!-- stats counter -->
+	<script src="~/js/counter.js"></script>
+	<!-- Date picker -->
+	<link rel="stylesheet" href="~/css/jquery-ui.css" />
+	<script src="~/js/jquery-ui.js"></script>
+	<script>
+		$(function () {
+			$("#datepicker1,#datepicker2").datepicker();
+		});
+	</script>
+	<!-- // Date picker -->
+	<!-- testimonials -->
+	<link href="~/css/owl.carousel.css" rel="stylesheet">
+	<script src="~/js/owl.carousel.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#owl-demo").owlCarousel({
+				items: 1,
+				lazyLoad: true,
+				autoPlay: false,
+				navigation: true,
+				navigationText: true,
+				pagination: true,
+			});
+		});
+	</script>
+	<!-- //for testimonials slider-js-script-->
+	<!-- Bootstrap Core JavaScript -->
+	<script src="~/js/bootstrap.js ">
+	</script>
+	<!-- //Bootstrap Core JavaScript -->
+</body>
+
+</html>
